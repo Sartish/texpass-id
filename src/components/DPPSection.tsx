@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const DPPSection = () => {
   const services = [
@@ -17,9 +18,9 @@ const DPPSection = () => {
   ];
 
   return (
-    <section className="w-full px-6 md:px-12 py-16 bg-emerald-900 text-white">
+    <section id="dpp-section" className="w-full px-6 md:px-12 py-20 md:py-24 bg-emerald-900 text-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Vi är med dig på resan
@@ -52,13 +53,18 @@ const DPPSection = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-emerald-800 rounded-2xl p-8 aspect-square flex items-center justify-center">
-              <div className="text-emerald-200">
-                Partnership Image Placeholder
-              </div>
+            <div className="bg-emerald-800 rounded-2xl p-4 md:p-6 aspect-auto flex items-center justify-center overflow-hidden">
+              <Image 
+                src="/desktop-mockup.svg" 
+                alt="Desktop application mockup" 
+                width={500} 
+                height={400} 
+                className="object-contain scale-110 transform hover:scale-105 transition-transform duration-500" 
+                priority
+              />
             </div>
-            <div className="absolute -top-4 -right-4 w-32 h-32 bg-emerald-800 -z-10 rounded-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-emerald-800 -z-10 rounded-2xl" />
+            <div className="absolute -top-6 -right-6 w-40 h-40 bg-emerald-800 -z-10 rounded-2xl" />
+            <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-emerald-800 -z-10 rounded-2xl" />
           </div>
         </div>
       </div>
