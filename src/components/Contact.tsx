@@ -6,10 +6,10 @@ const Contact = () => {
   return (
     <section id="contact" className="w-full px-4 sm:px-6 md:px-12 py-10 sm:py-16 bg-gray-50">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">
           Kontakta oss!
         </h2>
-        <p className="text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg">
+        <p className="text-gray-800 mb-8 sm:mb-12 text-base sm:text-lg">
           Anmäl dig idag och få tillgång till evenemang och information om hur du kan använda Texpass ID DPP-lösning för ditt företag.
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4 sm:gap-8 mb-8 sm:mb-12">

@@ -9,7 +9,7 @@ const Features = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-gray-900">
               Vad gör vår DPP-lösning unik?
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+            <p className="text-base sm:text-lg text-gray-800 mb-6 sm:mb-8">
               Vår plattform är utformad för små och medelstora företag och fungerar lika bra för:
             </p>
             
