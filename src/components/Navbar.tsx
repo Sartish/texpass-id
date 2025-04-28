@@ -13,19 +13,6 @@ const Navbar = () => {
       } else {
         setShowScrollTop(false);
       }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-  
   return (
     <>
       <nav className="w-full py-4 px-6 md:px-12 flex justify-between items-center bg-amber-50">
