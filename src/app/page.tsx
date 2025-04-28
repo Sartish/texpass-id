@@ -18,7 +18,7 @@ export default function Home() {
       </main>
       <Contact />
       <footer className="w-full py-6 px-6 md:px-12 bg-gray-900 text-white text-center">
-        <p className="text-sm text-gray-400">@Texpass ID 2025</p>
+        <p className="text-sm text-gray-400">@TexpassID created and powered by <a href="https://elobina.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-emerald-400">elobina.com</a></p>
       </footer>
     </div>
   );
