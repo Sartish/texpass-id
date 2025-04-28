@@ -48,7 +48,7 @@ const Navbar = () => {
       
       {showScrollTop && (
         <button 
-          onClick={scrollToTop}
+
           className="fixed bottom-6 right-6 bg-emerald-600 text-white p-3 rounded-full shadow-lg hover:bg-emerald-700 transition-all z-50 animate-bounce"
           aria-label="Scrolla till toppen"
         >
