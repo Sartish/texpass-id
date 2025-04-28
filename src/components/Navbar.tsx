@@ -19,14 +19,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  const scrollToSection = (sectionId: string) => {
-    // Using client-side JavaScript for scrolling
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
