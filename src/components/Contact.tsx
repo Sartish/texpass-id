@@ -1,15 +1,15 @@
 const Contact = () => {
   return (
-    <section id="contact" className="w-full px-6 md:px-12 py-16 bg-gray-50">
+    <section id="contact" className="w-full px-4 sm:px-6 md:px-12 py-10 sm:py-16 bg-gray-50">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
           Kontakta oss!
         </h2>
-        <p className="text-gray-600 mb-12">
+        <p className="text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg">
           Anmäl dig idag och få tillgång till evenemang och information om hur du kan använda Texpass ID DPP-lösning för ditt företag.
         </p>
         
-        <div className="flex flex-col md:flex-row justify-center gap-8 mb-12">
+        <div className="flex flex-col md:flex-row justify-center gap-4 sm:gap-8 mb-8 sm:mb-12">
           <div className="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -24,7 +24,7 @@ const Contact = () => {
           </div>
         </div>
         
-        <form className="space-y-4">
+        <form className="space-y-3 sm:space-y-4">
           <input
             type="text"
             placeholder="Fullständigt namn"
@@ -37,7 +37,7 @@ const Contact = () => {
           />
           <button
             type="submit"
-            className="w-full bg-emerald-600 text-white py-3 px-6 rounded-lg hover:bg-emerald-700 transition-colors"
+            className="w-full bg-emerald-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-emerald-700 transition-colors text-base sm:text-lg"
           >
             Anmäl dig
           </button>

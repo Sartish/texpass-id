@@ -7,6 +7,12 @@
   --foreground: #171717;
 }
 
+@media (max-width: 640px) {
+  :root {
+    --foreground: #18181b; /* Much darker text for mobile */
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

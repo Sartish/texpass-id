@@ -18,22 +18,22 @@ const DPPSection = () => {
   ];
 
   return (
-    <section id="dpp-section" className="w-full px-6 md:px-12 py-20 md:py-24 bg-emerald-900 text-white overflow-hidden">
+    <section id="dpp-section" className="w-full px-4 sm:px-6 md:px-12 py-10 sm:py-20 md:py-24 bg-emerald-900 text-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12 md:gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
               Vi är med dig på resan
             </h2>
-            <p className="text-emerald-100 text-lg mb-8">
+            <p className="text-emerald-100 text-base sm:text-lg mb-6 sm:mb-8">
               Vi erbjuder inte bara en teknisk lösning – vi är din partner hela vägen:
             </p>
             
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {services.map((service, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="text-2xl">{service.icon}</div>
-                  <p className="text-emerald-50 text-lg">{service.title}</p>
+                  <div className="text-xl sm:text-2xl">{service.icon}</div>
+                  <p className="text-emerald-50 text-sm sm:text-lg">{service.title}</p>
                 </div>
               ))}
             </div>
@@ -53,13 +53,13 @@ const DPPSection = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-emerald-800 rounded-2xl p-4 md:p-6 aspect-auto flex items-center justify-center overflow-hidden">
+            <div className="bg-emerald-800 rounded-2xl p-2 sm:p-4 md:p-6 aspect-auto flex items-center justify-center overflow-hidden">
               <Image 
                 src="/desktop-mockup.svg" 
                 alt="Desktop application mockup" 
-                width={500} 
-                height={400} 
-                className="object-contain scale-110 transform hover:scale-105 transition-transform duration-500" 
+                width={220} 
+                height={160} 
+                className="object-contain scale-100 sm:scale-110 transform hover:scale-105 transition-transform duration-500 w-[150px] sm:w-[220px] md:w-[500px] h-auto mx-auto" 
                 priority
               />
             </div>
