@@ -19,8 +19,8 @@ const Features = () => {
                   <div className="w-1 h-6 bg-emerald-600"></div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Produkter som tillverkas på beställning</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-semibold mb-2 text-black" style={{ color: '#18181b' }}>Produkter som tillverkas på beställning</h3>
+                  <p className="text-black" style={{ color: '#18181b' }}>
                     Perfekt för skräddarsydd produktion.
                   </p>
                 </div>
@@ -31,8 +31,8 @@ const Features = () => {
                   <div className="w-1 h-6 bg-emerald-600"></div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Traditionella produkter</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-semibold mb-2 text-black" style={{ color: '#18181b' }}>Traditionella produkter</h3>
+                  <p className="text-black" style={{ color: '#18181b' }}>
                     Effektivt även för regelbunden produktion.
                   </p>
                 </div>
