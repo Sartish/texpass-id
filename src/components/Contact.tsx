@@ -1,4 +1,8 @@
+"use client";
+import { useForm, ValidationError } from '@formspree/react';
+
 const Contact = () => {
+  const [state, handleSubmit] = useForm("mqaqavrl");
   return (
     <section id="contact" className="w-full px-4 sm:px-6 md:px-12 py-10 sm:py-16 bg-gray-50">
       <div className="max-w-2xl mx-auto text-center">
@@ -8,7 +12,6 @@ const Contact = () => {
         <p className="text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg">
           Anmäl dig idag och få tillgång till evenemang och information om hur du kan använda Texpass ID DPP-lösning för ditt företag.
         </p>
-        
         <div className="flex flex-col md:flex-row justify-center gap-4 sm:gap-8 mb-8 sm:mb-12">
           <div className="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -23,27 +26,37 @@ const Contact = () => {
             <span className="text-gray-600">hello@texpass.com</span>
           </div>
         </div>
-        
-        <form className="space-y-3 sm:space-y-4">
-          <input
-            type="text"
-            placeholder="Fullständigt namn"
-            className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-600 focus:border-transparent outline-none"
-          />
-          <input
-            type="email"
-            placeholder="E-post"
-            className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-600 focus:border-transparent outline-none"
-          />
-          <button
-            type="submit"
-            className="w-full bg-emerald-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-emerald-700 transition-colors text-base sm:text-lg"
-          >
-            Anmäl dig
-          </button>
-        </form>
-        
-
+        {state.succeeded ? (
+          <p className="text-green-600 font-semibold">Tack för din anmälan!</p>
+        ) : (
+          <form className="space-y-3 sm:space-y-4" onSubmit={handleSubmit}>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Fullständigt namn"
+              required
+              className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-600 focus:border-transparent outline-none"
+            />
+            <ValidationError prefix="Namn" field="name" errors={state.errors} />
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="E-post"
+              required
+              className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-600 focus:border-transparent outline-none"
+            />
+            <ValidationError prefix="E-post" field="email" errors={state.errors} />
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className="w-full bg-emerald-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-emerald-700 transition-colors text-base sm:text-lg"
+            >
+              Anmäl dig
+            </button>
+          </form>
+        )}
       </div>
     </section>
   );
