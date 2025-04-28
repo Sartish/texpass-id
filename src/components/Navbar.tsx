@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
@@ -13,6 +13,11 @@ const Navbar = () => {
       } else {
         setShowScrollTop(false);
       }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       <nav className="w-full py-4 px-6 md:px-12 flex justify-between items-center bg-amber-50">
@@ -48,7 +53,6 @@ const Navbar = () => {
       
       {showScrollTop && (
         <button 
-
           className="fixed bottom-6 right-6 bg-emerald-600 text-white p-3 rounded-full shadow-lg hover:bg-emerald-700 transition-all z-50 animate-bounce"
           aria-label="Scrolla till toppen"
         >
