@@ -1,7 +1,14 @@
-import Link from 'next/link';
+"use client";
+
 import Image from 'next/image';
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section className="w-full px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:py-24 bg-amber-50 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
@@ -27,12 +34,12 @@ const Hero = () => {
                 Driver du en mindre eller medelstor verksamhet? Då är vår lösning perfekt för dig – enkel att använda och anpassad för dina behov.
               </p>
               <div>
-                <Link
-                  href="/register"
+                <button
+                  onClick={scrollToContact}
                   className="bg-emerald-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg hover:bg-emerald-700 transition-all text-center inline-flex items-center font-medium tracking-wide text-base sm:text-lg shadow-md hover:shadow-lg transform hover:-translate-y-1"
                 >
                   Anmäl dig till väntelistan
-                </Link>
+                </button>
               </div>
             </div>
           </div>

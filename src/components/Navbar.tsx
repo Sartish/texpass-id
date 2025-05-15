@@ -14,6 +14,13 @@ const Navbar = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const scrollToSection = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className="w-full py-4 px-6 md:px-12 flex justify-between items-center bg-amber-50 relative">
       <div className="flex items-center">
@@ -23,8 +30,8 @@ const Navbar = () => {
       </div>
       {/* Desktop menu */}
       <div className="hidden md:flex items-center space-x-6">
-        <a href="#contact" className="text-gray-600 hover:text-gray-900">Kontakt</a>
-        <a href="#dpp-section" className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors">Läs mer</a>
+        <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-gray-900">Kontakt</button>
+        <button onClick={() => scrollToSection('dpp-section')} className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors">Läs mer</button>
       </div>
       {/* Hamburger button for mobile */}
       <button
@@ -56,8 +63,24 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          <a href="#contact" className="text-gray-700 text-lg font-medium hover:text-emerald-600 w-full text-right" onClick={() => setMenuOpen(false)}>Kontakt</a>
-          <a href="#dpp-section" className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors w-full text-right" onClick={() => setMenuOpen(false)}>Läs mer</a>
+          <button 
+            className="text-gray-700 text-lg font-medium hover:text-emerald-600 w-full text-right" 
+            onClick={() => {
+              scrollToSection('contact');
+              setMenuOpen(false);
+            }}
+          >
+            Kontakt
+          </button>
+          <button 
+            className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors w-full text-right" 
+            onClick={() => {
+              scrollToSection('dpp-section');
+              setMenuOpen(false);
+            }}
+          >
+            Läs mer
+          </button>
         </div>
       </div>
       {showScrollTop && (

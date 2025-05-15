@@ -1,7 +1,14 @@
-import Link from 'next/link';
+"use client";
+
 import Image from 'next/image';
 
 const DPPSection = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const services = [
     {
       title: "Praktiska workshops som gör det enkelt att starta",
@@ -39,13 +46,13 @@ const DPPSection = () => {
             </div>
             
             <div className="mt-12">
-              <Link
-                href="/register"
+              <button
+                onClick={scrollToContact}
                 className="inline-flex items-center gap-2 bg-white text-emerald-900 px-6 py-3 rounded-lg hover:bg-emerald-50 transition-colors group"
               >
                 Registrera dig idag
                 <span className="group-hover:translate-x-1 transition-transform">➡️</span>
-              </Link>
+              </button>
               <p className="text-emerald-100 mt-3 text-sm">
                 Få exklusiv tillgång till våra evenemang och verktyg!
               </p>
